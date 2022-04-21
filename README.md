@@ -1,25 +1,72 @@
-## Abstract:
+# Wheat Class Prediction
 
-Measurements of geometrical properties of kernels belonging to three different varieties of wheat. A soft X-ray technique and GRAINS package were used to construct all seven, real-valued attributes.
+# 0. Introduction
+This project focuses on building a web application to predict Wheat Class on the basis of their Physical appearance.
+
+We developed our application using a series of logical steps to ensure that users can easily use the application and make accurate predictions.
+
+0) Introduction
+1) Problem definition
+2) Solution approach
+3) Results and discussions
+4) Use Website for Wheat Class Prediction
+
+# 1. Problem definition
+This dataset is a record of 3 common different wheat classes in food market sales. With this dataset, a predictive model can be performed using machine friendly data and estimate the classes of wheat can be predicted.
+
+# 2. Solution approach
+
+1) Define requirements
+2) Gather data, analyze and build models
+3) Build web backend API to use model
+4) Design and develope frontend
+7) Intergrate both frontend and backend
+8) Test the entire application
+9) Host the Application on Heroku
 
 
-## Data Set Information:
+## Define requirements
+The requriements were gathered from the problem and formally defined.
 
-The examined group comprised kernels belonging to three different varieties of wheat: Kama, Rosa and Canadian, 70 elements each, randomly selected for
-the experiment. High quality visualization of the internal kernel structure was detected using a soft X-ray technique. It is non-destructive and considerably cheaper than other more sophisticated imaging techniques like scanning microscopy or laser technology. The images were recorded on 13x18 cm X-ray KODAK plates. Studies were conducted using combine harvested wheat grain originating from experimental fields, explored at the Institute of Agrophysics of the Polish Academy of Sciences in Lublin.
+### User function
+* Verify the different physical features of Wheat seed
+* Enter these features in Web App to predict class of wheat
 
+### Operating enviroment
+* client/server system (Web)
+* client: Web browers
+* server: Python/Flask
+* database: sqlite
+* platform: Python/HTML5/CSS3
+* Operating system: Windows, Mac, Linux
 
-The data set can be used for the tasks of classification and cluster analysis.
+## 2. Gather data, analyze and build models
+Data was downloaded from [here](https://www.kaggle.com/jmcaro/wheat-seedsuci)
+We broke everything into the following steps
+We started by loading data and packages we needed for the research.I then
+analyzed the data to understand the relationships between features. We cleaned the data and using some domain knowlegde replaced some
+missing values. The next step was feature tranformation to make the data
+compatible with our models. We then trained our model and started perfoming
+some predictions.
 
+## 3. Build web backend API to use model
+Using python and the flask web framework I built a web API the takes advantage of our model. The
+flask server recieves this request and sends a response containing the predicted species.
 
-## Attribute Information:
+## 6. Design and develope frontend
+The User interface of the application was built using HTML and CSS.
 
-To construct the data, seven geometric parameters of wheat kernels were measured:
-    1. area A,
-    2. perimeter P,
-    3. compactness C = 4*pi*A/P^2,
-    4. length of kernel,
-    5. width of kernel,
-    6. asymmetry coefficient
-    7. length of kernel groove.
-All of these parameters were real-valued continuous.
+## 7. Intergrate both frontend and backend
+We send data from the forms on the webpage to the Cloud server
+and the server sends a reponse, which is a prediction of the class matching those features
+
+## 8. Test the entire application
+We run multiple tests fixed bugs in the code.
+
+# 3. Results and discussions
+
+We were able to build a web application that can predict the class of wheat seed given certain features. The application runs in the cloud platform named Heroku and talks to a flask server that is taking data and passing it to a machine learning model.
+
+# 4. Use Website for Fish Species Prediction
+
+We have hosted my webpage on Heroku platform. If anyone want to try please click on https://wheat-class-prediction.herokuapp.com/ . 
